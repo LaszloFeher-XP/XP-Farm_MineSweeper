@@ -14,3 +14,4 @@
  - create logic 📃
 
  - added US1/UAT1.1
+ - fixed US1/UAT1.1 ✔

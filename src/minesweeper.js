@@ -1,7 +1,15 @@
 class MineSweeper {
 
-  func() {
-    return '';
+  getGameBoardAndCreationLabels() {
+    let result = `+-+-+-+\n`;
+    result += `| | | |\n`;
+    result += `+-+-+-+\n`;
+    result += `| | | |\n`;
+    result += `+-+-+-+\n`;
+    result += `| | | |\n`;
+    result += `+-+-+-+\n`;
+    result += `[Sandbox 3x3] Game created`;
+    return result;
   }
 }
 
