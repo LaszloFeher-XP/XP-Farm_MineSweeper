@@ -101,6 +101,23 @@ So that create the logic for handling tests
   `+-+-+-+`
   `[Sandbox 3x3] the land is cleared! GOOD JOB!`
 
+### User story 2. - Bombs next to me
+As a user
+I want to find find how many bombs can I find neext to the selected cells
+So that check neighbour cells
+
+#### Scenarios
+
+#### 2.7
+ - Given 3 bombs on 2,1 1,1 1,2
+ - When takeStep to 2,2
+ - Then returns `3 bombs around your square`
+
+#### 2.8
+ - Given 3 bombs on 1,0 1,2
+ - When takeStep to 1,1
+ - Then `2 bombs around your square`
+
 
 # Setting up the environment
 
