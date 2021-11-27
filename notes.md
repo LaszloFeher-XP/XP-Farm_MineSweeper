@@ -20,3 +20,4 @@
  - added US1/UAT1.3
  - fixed US1/UAT1.3 ✔
  - added US2/2.7
+ - fixed US2/2.7 ✔

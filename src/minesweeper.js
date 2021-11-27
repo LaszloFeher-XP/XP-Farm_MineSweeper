@@ -1,5 +1,10 @@
 class MineSweeper {
 
+  constructor() {
+    this.bombs = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
+    this.board = [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']];
+  }
+
   getGameBoardAndCreationLabels() {
     let result = `+-+-+-+\n`;
     result += `| | | |\n`;
@@ -34,6 +39,14 @@ class MineSweeper {
     result += `+-+-+-+\n`;
     result += `[Sandbox 3x3] 3 bombs around your square.`;
     return result;
+  }
+
+  addBomb(row, col) {
+    this.bombs[row][col] = 1;
+  }
+
+  takeStep(row, col) {
+    this.board[row][col] = '3';
   }
 }
 
