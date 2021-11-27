@@ -1,0 +1,380 @@
+{
+  "extends": "tslint:recommended",
+  "rulesDirectory": [
+    "codelyzer"
+  ],
+  "rules": {
+    "array-type": [
+      true,
+      "array"
+    ],
+    "arrow-parens": [
+      true,
+      "ban-single-arg-parens"
+    ],
+    "deprecation": true,
+    "import-blacklist": [
+      true,
+      "rxjs/Rx"
+    ],
+    "interface-name": [
+      true,
+      "never-prefix"
+    ],
+    "max-classes-per-file": [
+      true,
+      1,
+      "exclude-class-expressions"
+    ],
+    "max-line-length": [
+      true,
+      160
+    ],
+    "member-access": [
+      true,
+      "no-public"
+    ],
+    "member-ordering": [
+      true,
+      {
+        "order": [
+          "public-static-field",
+          "static-field",
+          "instance-field",
+          "constructor",
+          "public-static-method",
+          "static-method",
+          "public-instance-method",
+          "instance-method"
+        ]
+      }
+    ],
+    "no-consecutive-blank-lines": [
+      true,
+      2
+    ],
+    "no-console": true,
+    "no-empty": true,
+    "no-inferrable-types": false,
+    "no-non-null-assertion": true,
+    "no-redundant-jsdoc": true,
+    "no-switch-case-fall-through": true,
+    "no-use-before-declare": true,
+    "no-var-requires": true,
+    "object-literal-key-quotes": [
+      true,
+      "as-needed"
+    ],
+    "object-literal-sort-keys": false,
+    "ordered-imports": [
+      true,
+      {
+        "import-sources-order": "case-insensitive",
+        "named-imports-order": "case-insensitive"
+      }
+    ],
+    "quotemark": [
+      true,
+      "single"
+    ],
+    "trailing-comma": [
+      true,
+      {
+        "multiline": {
+          "objects": "always",
+          "arrays": "always",
+          "functions": "never",
+          "typeLiterals": "always"
+        },
+        "singleline": "never"
+      }
+    ],
+    "no-output-on-prefix": true,
+    "no-input-rename": false,
+    "no-output-rename": false,
+    "use-life-cycle-interface": true,
+    "use-pipe-transform-interface": true,
+    "component-class-suffix": true,
+    "directive-class-suffix": true,
+    "no-unnecessary-type-assertion": true,
+    "curly": true,
+    "triple-equals": [
+      true,
+      "allow-null-check",
+      "allow-undefined-check"
+    ],
+    "ban": [
+      true,
+      "setInterval"
+    ],
+    "ban-types": [
+      true,
+      [
+        "Object",
+        "Avoid using the `Object` type. Did you mean `object`?"
+      ],
+      [
+        "Function",
+        "Avoid using the `Function` type. Prefer a specific function type, like `() => void`, or use `ts.AnyFunction`."
+      ],
+      [
+        "Boolean",
+        "Avoid using the `Boolean` type. Did you mean `boolean`?"
+      ],
+      [
+        "Number",
+        "Avoid using the `Number` type. Did you mean `number`?"
+      ],
+      [
+        "String",
+        "Avoid using the `String` type. Did you mean `string`?"
+      ]
+    ],
+    "no-empty-interface": false,
+    "no-import-side-effect": true,
+    "no-parameter-reassignment": true,
+    "only-arrow-functions": [
+      true,
+      "allow-declarations",
+      "allow-named-functions"
+    ],
+    "prefer-for-of": true,
+    "promise-function-async": false,
+    "typedef": [
+      true,
+      "call-signature",
+      "arrow-call-signature",
+      "parameter",
+      "arrow-parameter",
+      "property-declaration",
+      "variable-declaration",
+      "member-variable-declaration",
+      "object-destructuring",
+      "array-destructuring"
+    ],
+    "unified-signatures": true,
+    "ban-comma-operator": true,
+    "no-async-without-await": true,
+    "no-bitwise": true,
+    "no-conditional-assignment": true,
+    "no-construct": true,
+    "no-duplicate-super": true,
+    "no-duplicate-switch-case": true,
+    "no-eval": true,
+    "no-floating-promises": true,
+    "no-invalid-template-strings": true,
+    "no-object-literal-type-assertion": true,
+    "no-shadowed-variable": true,
+    "no-sparse-arrays": true,
+    "no-string-literal": true,
+    "no-string-throw": true,
+    "no-this-assignment": true,
+    "no-unsafe-finally": true,
+    "no-unused-expression": true,
+    "no-unused-variable": true,
+    "no-var-keyword": true,
+    "no-void-expression": false,
+    "prefer-conditional-expression": false,
+    "static-this": true,
+    "strict-type-predicates": true,
+    "typeof-compare": true,
+    "unnecessary-constructor": true,
+    "use-isnan": true,
+    "no-require-imports": true,
+    "prefer-const": true,
+    "prefer-readonly": true,
+    "arrow-return-shorthand": true,
+    "comment-format": [
+      true,
+      "check-space"
+    ],
+    "encoding": true,
+    "file-name-casing": [
+      true,
+      {
+        ".component.ts": "kebab-case",
+        ".module.ts": "kebab-case",
+        ".pipe.ts": "kebab-case",
+        ".guard.ts": "kebab-case",
+        ".model.ts": "kebab-case",
+        ".service.ts": "kebab-case",
+        ".animation.ts": "kebab-case",
+        ".interop.ts": "kebab-case",
+        ".enum.ts": "kebab-case",
+        ".strategy.ts": "kebab-case",
+        ".communicator.ts": "kebab-case",
+        ".directive.ts": "kebab-case",
+        ".*": "kebab-case"
+      }
+    ],
+    "no-boolean-literal-compare": true,
+    "no-unnecessary-callback-wrapper": true,
+    "no-unnecessary-initializer": true,
+    "one-variable-per-declaration": true,
+    "prefer-switch": false,
+    "prefer-template": true,
+    "unnecessary-else": true,
+    "variable-name": {
+      "options": [
+        "ban-keywords",
+        "check-format",
+        "allow-leading-underscore"
+      ]
+    },
+    "eofline": true,
+    "indent": [
+      true,
+      "spaces",
+      2
+    ],
+    "jsdoc-format": true,
+    "linebreak-style": [
+      true,
+      "LF"
+    ],
+    "new-parens": true,
+    "no-irregular-whitespace": true,
+    "no-trailing-whitespace": true,
+    "number-literal-format": true,
+    "semicolon": [
+      true,
+      "always"
+    ],
+    "whitespace": [
+      true,
+      "check-branch",
+      "check-decl",
+      "check-operator",
+      "check-module",
+      "check-separator",
+      "check-rest-spread",
+      "check-type",
+      "check-type-operator",
+      "check-preblock"
+    ],
+    "contextual-decorator": false,
+    "contextual-lifecycle": true,
+    "no-pipe-impure": true,
+    "template-banana-in-box": true,
+    "template-no-distracting-elements": true,
+    "template-no-negated-async": true,
+    "use-lifecycle-interface": true,
+    "component-max-inline-declarations": [
+      true,
+      {
+        "animations": 1,
+        "styles": 1,
+        "template": 1
+      }
+    ],
+    "no-conflicting-lifecycle": true,
+    "no-unused-css": true,
+    "prefer-output-readonly": true,
+    "relative-url-prefix": true,
+    "template-conditional-complexity": true,
+    "use-pipe-decorator": true,
+    "angular-whitespace": [
+      true,
+      "check-interpolation",
+      "check-pipe",
+      "check-semicolon"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "app",
+      "kebab-case"
+    ],
+    "directive-selector": [
+      true,
+      "element",
+      "app",
+      "camel-case"
+    ],
+    "pipe-prefix": [
+      true,
+      "app"
+    ],
+    "import-destructuring-spacing": true,
+    "no-host-metadata-property": true,
+    "no-inputs-metadata-property": true,
+    "no-outputs-metadata-property": true,
+    "no-queries-metadata-property": true,
+    "prefer-inline-decorator": [
+      true,
+      "Input",
+      "Output",
+      "HostListener"
+    ],
+    "no-angle-bracket-type-assertion": false,
+    "align": true,
+    "forin": false,
+    "import-spacing": false,
+    "binary-expression-operand-order": true,
+    "await-promise": true,
+    "class-name": true,
+    "interface-over-type-literal": true,
+    "max-file-line-count": [
+      true,
+      350
+    ],
+    "match-default-export-name": true,
+    "no-duplicate-imports": true,
+    "no-duplicate-variable": true,
+    "no-dynamic-delete": true,
+    "no-for-in-array": true,
+    "no-invalid-this": true,
+    "no-magic-numbers": true,
+    "no-misused-new": true,
+    "no-null-keyword": false
+  }
+}
+
+
+
+WARNING: Within "tslint.json", the following 16 rule(s) did not have known converters in https: //github.com/typescript-eslint/tslint-to-eslint-config
+    
+      - angular-whitespace
+      - ban
+      - encoding
+      - import-destructuring-spacing
+      - match-default-export-name
+      - no-dynamic-delete
+      - no-unnecessary-callback-wrapper
+      - no-unused-css
+      - number-literal-format
+      - prefer-inline-decorator
+      - static-this
+      - strict-type-predicates
+      - template-conditional-complexity
+      - template-no-distracting-elements
+      - unnecessary-else
+      - use-life-cycle-interface
+
+      - "no-redundant-jsdoc"
+      - "no-import-side-effect"
+      - "no-construct"
+      - "no-invalid-template-strings"
+      - "no-object-literal-type-assertion"
+      - "no-string-literal"
+      - "no-this-assignment"
+      - "no-void-expression"
+      - "variable-name"
+      - "indent"
+      - "jsdoc-format"
+      - "template-banana-in-box"
+      - "template-no-negated-async"
+      - "binary-expression-operand-order"
+      - "class-name"
+    
+    You will need to decide on how to handle the above manually, but everything else has been handled for you automatically.
+    
+    
+    INFO: To most closely match your tslint.json, the `latest` version of the following eslint plugin(s) have been installed:
+    
+      - eslint-plugin-unicorn
+      - eslint-plugin-no-null
+    
+    Please note, you may wish to pin these to a specific version number in your package.json, rather than leaving it open to `latest`.
+    
+"@typescript-eslint/no-param-reassign": "error",

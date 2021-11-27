@@ -1,0 +1,43 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "extensions": {
+    "recommendations": [
+      "mrmlnc.vscode-scss",
+      "equinusocio.vsc-community-material-theme",
+      "equinusocio.vsc-material-theme-icons",
+      "dbaeumer.vscode-eslint",
+      "oderwat.indent-rainbow",
+      "coenraads.bracket-pair-colorizer-2",
+      "aaron-bond.better-comments",
+      "mrmlnc.vscode-duplicate",
+      "formulahendry.auto-rename-tag",
+      "stepsize.tech-debt-tracker"
+    ],
+    "unwantedRecommendations": [
+      "ms-vscode.vscode-typescript-tslint-plugin",
+    ]
+  },
+  "settings": {
+    "editor.detectIndentation": false,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.formatOnPaste": true,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 160,
+    "editor.tabSize": 2,
+    "files.eol": "\n",
+    "files.encoding": "utf8",
+    "html.format.wrapLineLength": 160,
+    "html.format.endWithNewline": true,
+    "tslint.configFile": "_tslint.json",
+    "tslint.packageManager": "yarn",
+    "workbench.colorTheme": "Monokai",
+    "workbench.iconTheme": "eq-material-theme-icons-darker",
+    "git.ignoreLimitWarning": true,
+    "angular.enable-strict-mode-prompt": false,
+  }
+}
