@@ -12,3 +12,5 @@
  - create scenarios 🚧
  - create tests 📃
  - create logic 📃
+
+ - added US1/UAT1.1
