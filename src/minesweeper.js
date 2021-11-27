@@ -23,6 +23,18 @@ class MineSweeper {
     result += `[Sandbox 3x3] BOOM! – Game Over.`;
     return result;
   }
+
+  getRoundResult() {
+    let result = `+-+-+-+\n`;
+    result += `| | | |\n`;
+    result += `+-+-+-+\n`;
+    result += `| | | |\n`;
+    result += `+-+-+-+\n`;
+    result += `|3| | |\n`;
+    result += `+-+-+-+\n`;
+    result += `[Sandbox 3x3] 3 bombs around your square.`;
+    return result;
+  }
 }
 
 module.exports = {
