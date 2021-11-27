@@ -48,7 +48,24 @@ describe('Mine Sweeper Kata', () => {
         expect(mineSweeper.getRoundResult()).toStrictEqual(expected);
       });
     });
+  });
 
+  describe('US2', () => {
+
+    describe('Bombs next to the me', () => {
+      test('7. GIVEN 3 bombs on 2,1 1,1 1,2 WHEN takeStep to 2,2 THEN 3 bombs around your square', () => {
+        const mineSweeper = new MineSweeper();
+        let expected = `+-+-+-+\n`;
+        expected += `| | |3|\n`;
+        expected += `+-+-+-+\n`;
+        expected += `| | | |\n`;
+        expected += `+-+-+-+\n`;
+        expected += `| | | |\n`;
+        expected += `+-+-+-+\n`;
+        expected += `[Sandbox 3x3] 3 bombs around your square.`;
+        expect(mineSweeper.getRoundResult()).toStrictEqual(expected);
+      });
+
+    });
   });
 });
-
