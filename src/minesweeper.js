@@ -2,6 +2,8 @@ class MineSweeper {
 
   constructor() {
     this.board = [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']];
+    this.bombs = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
+    this.roundResult = '';
   }
 
   getGameBoardAndCreationLabels() {
@@ -30,26 +32,33 @@ class MineSweeper {
 
   getRoundResult() {
     let result = `+-+-+-+\n`;
-    if (this.board[2][2] === '3') {
-      result += `| | |3|\n`;
-    } else {
-      result += `| | | |\n`;
-    }
+    result += `|${this.board[2][0]}|${this.board[2][1]}|${this.board[2][2]}|\n`;
     result += `+-+-+-+\n`;
-    result += `| | | |\n`;
+    result += `|${this.board[1][0]}|${this.board[1][1]}|${this.board[1][2]}|\n`;
     result += `+-+-+-+\n`;
-    if (this.board[0][0] === '3') {
-      result += `|3| | |\n`;
-    } else {
-      result += `| | | |\n`;
-    }
+    result += `|${this.board[0][0]}|${this.board[0][1]}|${this.board[0][2]}|\n`;
     result += `+-+-+-+\n`;
-    result += `[Sandbox 3x3] 3 bombs around your square.`;
+    result += `${this.roundResult}`;
     return result;
   }
 
   takeStep(row, col) {
-    this.board[row][col] = '3';
+    let numberOfBombs = 0;
+    for (let i = -1; i < 2; i++) {
+      for (let j = -1; j < 2; j++) {
+        if (this.bombs[row + i] && this.bombs[row + i][col + j]) {
+          numberOfBombs++;
+        }
+      }
+    }
+    if (numberOfBombs > 0) {
+      this.board[row][col] = numberOfBombs;
+      this.roundResult = `[Sandbox 3x3] ${numberOfBombs} bombs around your square.`;
+    }
+  }
+
+  addBomb(row, col) {
+    this.bombs[row][col] = 1;
   }
 }
 

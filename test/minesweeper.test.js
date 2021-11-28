@@ -82,6 +82,8 @@ describe('Mine Sweeper Kata', () => {
 
         // GIVEN
         const mineSweeper = new MineSweeper();
+        mineSweeper.addBomb(1, 0);
+        mineSweeper.addBomb(1, 2);
 
         // WHEN
         mineSweeper.takeStep(1, 1);
