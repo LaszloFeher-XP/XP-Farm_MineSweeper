@@ -257,4 +257,29 @@ describe('Mine Sweeper Kata', () => {
       });
     });
   });
+
+  describe('US4', () => {
+    describe('Clear the board recursively', () => {
+      test('11. GIVEN 1 bomb on 0,0 WHEN takeStep to 2,2 THEN recursive check to fields have 0 bombs', () => {
+
+        // GIVEN
+        const mineSweeper = new MineSweeper();
+        mineSweeper.addBomb(0, 0);
+
+        // WHEN
+        mineSweeper.takeStep(2, 2);
+
+        // THEN
+        let expected = `+-+-+-+\n`;
+        expected += `|_|_|_|\n`;
+        expected += `+-+-+-+\n`;
+        expected += `|1|1|_|\n`;
+        expected += `+-+-+-+\n`;
+        expected += `| |1|_|\n`;
+        expected += `+-+-+-+\n`;
+        expected += `[Sandbox 3x3] the land is cleared! GOOD JOB!`;
+        expect(mineSweeper.getFinalResult()).toStrictEqual(expected);
+      });
+    });
+  });
 });
