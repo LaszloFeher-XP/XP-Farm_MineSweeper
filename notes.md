@@ -38,3 +38,4 @@
  - added US3/3.10 ✔
  - refactored US1/UAT1.5 ✔
  - refactored US1/UAT1.4 ✔
+ - refactored uncovered ✔

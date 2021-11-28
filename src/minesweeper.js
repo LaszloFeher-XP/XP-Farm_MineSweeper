@@ -55,10 +55,8 @@ class MineSweeper {
         }
       }
     }
-    if (numberOfBombs > 0) {
-      this.board[row][col] = numberOfBombs;
-      this.roundResult = `[Sandbox 3x3] ${numberOfBombs} bombs around your square.`;
-    }
+    this.board[row][col] = numberOfBombs;
+    this.roundResult = `[Sandbox 3x3] ${numberOfBombs} bombs around your square.`;
   }
 
   addBomb(row, col) {
