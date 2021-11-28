@@ -9,6 +9,8 @@ class MineSweeper {
     this.BOMB = 'X';
     this.FLAG = '*';
     this.NO_NEIGHBOURS = '_';
+    this.EMPTY = ' ';
+    this.DIMENSION = 3;
   }
 
   getGameBoardAndCreationLabels() {
@@ -51,8 +53,8 @@ class MineSweeper {
     }
 
     let numberOfBombs = 0;
-    for (let i = -1; i < 2; i++) {
-      for (let j = -1; j < 2; j++) {
+    for (let i = -1; i < this.DIMENSION - 1; i++) {
+      for (let j = -1; j < this.DIMENSION - 1; j++) {
         if (this.bombs[row + i] && this.bombs[row + i][col + j]) {
           numberOfBombs++;
         }
@@ -69,9 +71,9 @@ class MineSweeper {
   }
 
   checkNeighbours(row, col) {
-    for (let i = Math.max(row - 1, 0); i <= Math.min(row + 1, 2); i++) {
-      for (let j = Math.max(col - 1, 0); j <= Math.min(col + 1, 2); j++) {
-        if (this.board[i][j] === ' ' && !this.bombs[i][j]) {
+    for (let i = Math.max(row - 1, 0); i <= Math.min(row + 1, this.DIMENSION - 1); i++) {
+      for (let j = Math.max(col - 1, 0); j <= Math.min(col + 1, this.DIMENSION - 1); j++) {
+        if (this.board[i][j] === this.EMPTY && !this.bombs[i][j]) {
           this.takeStep(i, j);
         }
       }
