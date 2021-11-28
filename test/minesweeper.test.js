@@ -57,6 +57,35 @@ describe('Mine Sweeper Kata', () => {
         expect(mineSweeper.getRoundResult()).toStrictEqual(expected);
       });
     });
+
+    describe('4 – Mark the bombs around – What I expect after I marked the 3 squares as bombs [1;0 + 1;1 + 0;1]', () => {
+      test('GIVEN 3 bombs on 0,1 1,0 1,1 WHEN takeStep to 0,0 and flag bomb field THEN return `Square flagged as bomb`', () => {
+
+        // GIVEN
+        const mineSweeper = new MineSweeper();
+        mineSweeper.addBomb(0, 1);
+        mineSweeper.addBomb(1, 0);
+        mineSweeper.addBomb(1, 1);
+
+        // WHEN
+        mineSweeper.takeStep(0, 0);
+        mineSweeper.flagSquare(0, 1);
+        mineSweeper.flagSquare(1, 0);
+        mineSweeper.flagSquare(1, 1);
+
+        // THEN
+        let expected = `+-+-+-+\n`;
+        expected += `| | | |\n`;
+        expected += `+-+-+-+\n`;
+        expected += `|*|*| |\n`;
+        expected += `+-+-+-+\n`;
+        expected += `|3|*| |\n`;
+        expected += `+-+-+-+\n`;
+        expected += `[Sandbox 3x3] Square flagged as bomb.`;
+        expect(mineSweeper.getRoundResult()).toStrictEqual(expected);
+      });
+    });
+
   });
 
   describe('US2', () => {
