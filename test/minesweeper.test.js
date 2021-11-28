@@ -176,4 +176,37 @@ describe('Mine Sweeper Kata', () => {
       });
     });
   });
+
+  describe('US3', () => {
+    describe('Clear the board', () => {
+      test('9. GIVEN 3 bombs on 0,1 1,0 1,1 WHEN takeSteps THEN return `the land is cleared! GOOD JOB!`', () => {
+
+        // GIVEN
+        const mineSweeper = new MineSweeper();
+        mineSweeper.addBomb(0, 1);
+        mineSweeper.addBomb(1, 0);
+        mineSweeper.addBomb(1, 1);
+
+        // WHEN
+        mineSweeper.takeStep(0, 0);
+        mineSweeper.takeStep(2, 0);
+        mineSweeper.takeStep(2, 1);
+        mineSweeper.takeStep(2, 2);
+        mineSweeper.takeStep(1, 2);
+        mineSweeper.takeStep(0, 2);
+
+        // THEN
+        let expected = `+-+-+-+\n`;
+        expected += `|2|2|1|\n`;
+        expected += `+-+-+-+\n`;
+        expected += `| | |2|\n`;
+        expected += `+-+-+-+\n`;
+        expected += `|3| |2|\n`;
+        expected += `+-+-+-+\n`;
+        expected += `[Sandbox 3x3] the land is cleared! GOOD JOB!`;
+        expect(mineSweeper.getFinalResult()).toStrictEqual(expected);
+      });
+
+    });
+  });
 });

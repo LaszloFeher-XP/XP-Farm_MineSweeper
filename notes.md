@@ -34,3 +34,4 @@
  - added US1/UAT1.5
  - fixed US1/UAT1.5 ✔
  - refactored US1/UAT1.2 ✔
+ - added US3/3.9 ✔
