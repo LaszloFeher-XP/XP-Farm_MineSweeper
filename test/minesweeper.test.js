@@ -307,5 +307,21 @@ describe('Mine Sweeper Kata', () => {
         expect(freeCell).toStrictEqual([2, 2]);
       });
     });
+
+    describe('1 bomb, 1 step, recursive check', () => {
+      test('13. GIVEN 1 bomb on 0,0 and 1 step on 2,2 WHEN search for free cells THEN finds only 0,0', () => {
+
+        // GIVEN
+        const mineSweeper = new MineSweeper();
+        mineSweeper.addBomb(0, 0);
+        mineSweeper.takeStep(2, 2);
+
+        // WHEN
+        const freeCell = mineSweeper.searchForFreeCell();
+
+        // THEN        
+        expect(freeCell).toStrictEqual([0, 0]);
+      });
+    });
   });
 });

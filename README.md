@@ -159,6 +159,12 @@ So that check for cells
  - When search for free cells
  - Then returns 2,2
 
+ 
+#### 5.13
+ - Given 1 bomb on 0,0 and 1 step on 2,2
+ - When search for free cells
+ - Then finds only 0,0
+
 # Setting up the environment
 
 ## To install dependencies
