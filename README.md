@@ -130,6 +130,11 @@ So that check if board is cleared
  - When takeSteps
  - Then return `the land is cleared! GOOD JOB!`
 
+#### 3.10
+ - Given 4 bombs on 0,1 1,0 1,1 1,2
+ - When takeSteps
+ - Then return `the land is cleared! GOOD JOB!`
+
 # Setting up the environment
 
 ## To install dependencies
