@@ -60,6 +60,11 @@ class MineSweeper {
   addBomb(row, col) {
     this.bombs[row][col] = 1;
   }
+
+  flagSquare(row, col) {
+    this.board[row][col] = '*';
+    this.roundResult = `[Sandbox 3x3] Square flagged as bomb.`;
+  }
 }
 
 module.exports = {
