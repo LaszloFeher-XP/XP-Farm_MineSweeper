@@ -36,7 +36,13 @@ describe('Mine Sweeper Kata', () => {
 
     describe('3 – Clean square 0;0 and get the number of bombs around', () => {
       test('GIVEN 3 bombs on 0,1 1,0 1,1 WHEN takeStep to 0,0 THEN 3 bombs around your square', () => {
+        // GIVEN
         const mineSweeper = new MineSweeper();
+
+        // WHEN
+        mineSweeper.takeStep(0, 0);
+
+        // THEN
         let expected = `+-+-+-+\n`;
         expected += `| | | |\n`;
         expected += `+-+-+-+\n`;
@@ -52,13 +58,10 @@ describe('Mine Sweeper Kata', () => {
 
   describe('US2', () => {
 
-    describe('Bombs next to the me', () => {
+    describe('Bombs next to me', () => {
       test('7. GIVEN 3 bombs on 2,1 1,1 1,2 WHEN takeStep to 2,2 THEN 3 bombs around your square', () => {
         // GIVEN
         const mineSweeper = new MineSweeper();
-        mineSweeper.addBomb(2, 1);
-        mineSweeper.addBomb(1, 1);
-        mineSweeper.addBomb(1, 2);
 
         // WHEN
         mineSweeper.takeStep(2, 2);

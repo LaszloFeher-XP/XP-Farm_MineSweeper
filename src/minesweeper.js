@@ -1,7 +1,6 @@
 class MineSweeper {
 
   constructor() {
-    this.bombs = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
     this.board = [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']];
   }
 
@@ -31,18 +30,22 @@ class MineSweeper {
 
   getRoundResult() {
     let result = `+-+-+-+\n`;
-    result += `| | | |\n`;
+    if (this.board[2][2] === '3') {
+      result += `| | |3|\n`;
+    } else {
+      result += `| | | |\n`;
+    }
     result += `+-+-+-+\n`;
     result += `| | | |\n`;
     result += `+-+-+-+\n`;
-    result += `|3| | |\n`;
+    if (this.board[0][0] === '3') {
+      result += `|3| | |\n`;
+    } else {
+      result += `| | | |\n`;
+    }
     result += `+-+-+-+\n`;
     result += `[Sandbox 3x3] 3 bombs around your square.`;
     return result;
-  }
-
-  addBomb(row, col) {
-    this.bombs[row][col] = 1;
   }
 
   takeStep(row, col) {

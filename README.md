@@ -116,7 +116,7 @@ So that check neighbour cells
 #### 2.8
  - Given 3 bombs on 1,0 1,2
  - When takeStep to 1,1
- - Then `2 bombs around your square`
+ - Then returns `2 bombs around your square`
 
 
 # Setting up the environment
