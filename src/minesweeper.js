@@ -15,17 +15,17 @@ class MineSweeper {
 
   getGameBoardAndCreationLabels() {
     let result = this.getGameBoard();
-    result += `[Sandbox 3x3] Game created`;
+    result += `${this.sandbox()} Game created`;
     return result;
   }
 
   getFinalResult() {
     let result = this.getGameBoard();
     if (this.gameOver) {
-      result += `[Sandbox 3x3] BOOM! – Game Over.`;
+      result += `${this.sandbox()} BOOM! – Game Over.`;
     }
     if (!this.gameOver) {
-      result += `[Sandbox 3x3] the land is cleared! GOOD JOB!`;
+      result += `${this.sandbox()} the land is cleared! GOOD JOB!`;
     }
     return result;
   }
@@ -62,7 +62,7 @@ class MineSweeper {
     }
     if (numberOfBombs > 0) {
       this.board[row][col] = numberOfBombs;
-      this.roundResult = `[Sandbox 3x3] ${numberOfBombs} bombs around your square.`;
+      this.roundResult = `${this.sandbox()} ${numberOfBombs} bombs around your square.`;
     }
     if (numberOfBombs === 0) {
       this.board[row][col] = this.NO_NEIGHBOURS;
@@ -86,7 +86,11 @@ class MineSweeper {
 
   flagSquare(row, col) {
     this.board[row][col] = this.FLAG;
-    this.roundResult = `[Sandbox 3x3] Square flagged as bomb.`;
+    this.roundResult = `${this.sandbox()} Square flagged as bomb.`;
+  }
+
+  sandbox() {
+    return `[Sandbox ${this.DIMENSION}x${this.DIMENSION}]`;
   }
 }
 
