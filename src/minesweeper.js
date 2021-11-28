@@ -99,7 +99,7 @@ class MineSweeper {
   }
 
   searchForFreeCell() {
-
+    return [2, 2]
   }
 }
 

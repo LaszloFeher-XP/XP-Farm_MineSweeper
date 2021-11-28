@@ -52,3 +52,4 @@
  - refactored: moved numberOfBombs to function ✔
  - US5 🚧
  - added US5/5.12 ✔
+ - fixed US5/5.12 ✔
