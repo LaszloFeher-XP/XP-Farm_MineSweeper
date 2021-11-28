@@ -10,8 +10,8 @@
  - create notes 🚧
  - create user stories 🚧
  - create scenarios 🚧
- - create tests 📃
- - create logic 📃
+ - create tests 🚧
+ - create logic 🚧
 
  - added US1/UAT1.1
  - fixed US1/UAT1.1 ✔
