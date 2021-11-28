@@ -118,6 +118,17 @@ So that check neighbour cells
  - When takeStep to 1,1
  - Then returns `2 bombs around your square`
 
+### User story 3. - Clear the board
+As a user
+I want to clear the board with steps
+So that check if board is cleared
+
+#### Scenarios
+
+#### 3.9
+ - Given 3 bombs on 0,1 1,0 1,1 
+ - When takeSteps
+ - Then return `the land is cleared! GOOD JOB!`
 
 # Setting up the environment
 
