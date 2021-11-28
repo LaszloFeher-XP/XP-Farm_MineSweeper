@@ -147,6 +147,18 @@ So that check if board is cleared with recursion
  - When takeStep to 2,2
  - Then recursive check to fields have 0 bombs 0,2 1,2
 
+### User story 5. - Game Logic tests
+As a user
+I want find free cells on the board
+So that check for cells
+
+#### Scenarios
+
+#### 5.12
+ - Given 1 bomb on 2,2 and 8 steps
+ - When search for free cells
+ - Then returns 2,2
+
 # Setting up the environment
 
 ## To install dependencies
