@@ -8,6 +8,7 @@ class MineSweeper {
 
     this.BOMB = 'X';
     this.FLAG = '*';
+    this.NO_NEIGHBOURS = '_';
   }
 
   getGameBoardAndCreationLabels() {
@@ -17,7 +18,7 @@ class MineSweeper {
   }
 
   getFinalResult() {
-    if (this.board[0][0] === '_') {
+    if (this.board[0][0] === this.NO_NEIGHBOURS) {
       let result = `+-+-+-+\n`;
       result += `|_|1| |\n`;
       result += `+-+-+-+\n`;
@@ -71,7 +72,7 @@ class MineSweeper {
       this.roundResult = `[Sandbox 3x3] ${numberOfBombs} bombs around your square.`;
     }
     if (numberOfBombs === 0) {
-      this.board[row][col] = '_';
+      this.board[row][col] = this.NO_NEIGHBOURS;
     }
   }
 

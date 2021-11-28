@@ -41,5 +41,6 @@
  - refactored uncovered ✔
 
 ## 3. Pomodoro
-- added US1/UAT1.6 ✔
-- fixed US1/UAT1.6 ✔
+ - added US1/UAT1.6 ✔
+ - fixed US1/UAT1.6 ✔
+ - refactored US1/UAT1.6 ✔
