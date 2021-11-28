@@ -86,6 +86,39 @@ describe('Mine Sweeper Kata', () => {
       });
     });
 
+    describe('5 – Game Victory – After I cleared the all the squares [2;0 + 2;1 + 2;2 + 1;2 + 0;2]', () => {
+      test('GIVEN 3 bombs on 0,1 1,0 1,1 WHEN takeStep to 0,0 and flag bomb fields THEN return `the land is cleared! GOOD JOB!`', () => {
+
+        // GIVEN
+        const mineSweeper = new MineSweeper();
+        mineSweeper.addBomb(0, 1);
+        mineSweeper.addBomb(1, 0);
+        mineSweeper.addBomb(1, 1);
+
+        // WHEN
+        mineSweeper.takeStep(0, 0);
+        mineSweeper.flagSquare(0, 1);
+        mineSweeper.flagSquare(1, 0);
+        mineSweeper.flagSquare(1, 1);
+        mineSweeper.takeStep(2, 0);
+        mineSweeper.takeStep(2, 1);
+        mineSweeper.takeStep(2, 2);
+        mineSweeper.takeStep(1, 2);
+        mineSweeper.takeStep(0, 2);
+
+        // THEN
+        let expected = `+-+-+-+\n`;
+        expected += `|2|2|1|\n`;
+        expected += `+-+-+-+\n`;
+        expected += `|*|*|2|\n`;
+        expected += `+-+-+-+\n`;
+        expected += `|3|*|2|\n`;
+        expected += `+-+-+-+\n`;
+        expected += `[Sandbox 3x3] the land is cleared! GOOD JOB!`;
+        expect(mineSweeper.getFinalResult()).toStrictEqual(expected);
+      });
+    });
+
   });
 
   describe('US2', () => {
