@@ -4,6 +4,7 @@ class MineSweeper {
     this.board = [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']];
     this.bombs = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
     this.roundResult = '';
+    this.gameOver = false;
   }
 
   getGameBoardAndCreationLabels() {
@@ -20,13 +21,17 @@ class MineSweeper {
 
   getFinalResult() {
     let result = `+-+-+-+\n`;
-    result += `| | | |\n`;
+    result += `|${this.board[2][0]}|${this.board[2][1]}|${this.board[2][2]}|\n`;
     result += `+-+-+-+\n`;
-    result += `| |X| |\n`;
+    result += `|${this.board[1][0]}|${this.board[1][1]}|${this.board[1][2]}|\n`;
     result += `+-+-+-+\n`;
-    result += `| | | |\n`;
+    result += `|${this.board[0][0]}|${this.board[0][1]}|${this.board[0][2]}|\n`;
     result += `+-+-+-+\n`;
-    result += `[Sandbox 3x3] BOOM! – Game Over.`;
+    if (this.gameOver) {
+      result += `[Sandbox 3x3] BOOM! – Game Over.`;
+    } else {
+      result += `[Sandbox 3x3] the land is cleared! GOOD JOB!`;
+    }
     return result;
   }
 
@@ -43,6 +48,11 @@ class MineSweeper {
   }
 
   takeStep(row, col) {
+    if (this.bombs[row][col]) {
+      this.board[row][col] = 'X';
+      this.gameOver = true;
+      return;
+    }
     let numberOfBombs = 0;
     for (let i = -1; i < 2; i++) {
       for (let j = -1; j < 2; j++) {

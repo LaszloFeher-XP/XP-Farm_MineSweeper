@@ -21,7 +21,14 @@ describe('Mine Sweeper Kata', () => {
 
     describe('2 - Game Over - Step on a bomb on 1;1', () => {
       test('GIVEN a board with bomb on 1,1 WHEN takeStep to 1,1 THEN Game Over', () => {
+        // GIVEN
         const mineSweeper = new MineSweeper();
+        mineSweeper.addBomb(1, 1);
+
+        // WHEN
+        mineSweeper.takeStep(1, 1);
+
+        // THEN
         let expected = `+-+-+-+\n`;
         expected += `| | | |\n`;
         expected += `+-+-+-+\n`;
