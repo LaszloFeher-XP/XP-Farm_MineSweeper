@@ -126,6 +126,28 @@ describe('Mine Sweeper Kata', () => {
       });
     });
 
+    describe('6 – Massive cleaning and victory clicking on 0;0', () => {
+      test('GIVEN 1 bomb on 2,2 WHEN takeStep to 0,0 THEN recursive check to fields have 0 bombs', () => {
+
+        // GIVEN
+        const mineSweeper = new MineSweeper();
+        mineSweeper.addBomb(2, 2);
+
+        // WHEN
+        mineSweeper.takeStep(0, 0);
+
+        // THEN
+        let expected = `+-+-+-+\n`;
+        expected += `|_|1| |\n`;
+        expected += `+-+-+-+\n`;
+        expected += `|_|1|1|\n`;
+        expected += `+-+-+-+\n`;
+        expected += `|_|_|_|\n`;
+        expected += `+-+-+-+\n`;
+        expected += `[Sandbox 3x3] the land is cleared! GOOD JOB!`;
+        expect(mineSweeper.getFinalResult()).toStrictEqual(expected);
+      });
+    });
   });
 
   describe('US2', () => {
