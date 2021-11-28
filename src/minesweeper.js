@@ -8,25 +8,13 @@ class MineSweeper {
   }
 
   getGameBoardAndCreationLabels() {
-    let result = `+-+-+-+\n`;
-    result += `| | | |\n`;
-    result += `+-+-+-+\n`;
-    result += `| | | |\n`;
-    result += `+-+-+-+\n`;
-    result += `| | | |\n`;
-    result += `+-+-+-+\n`;
+    let result = this.getGameBoard();
     result += `[Sandbox 3x3] Game created`;
     return result;
   }
 
   getFinalResult() {
-    let result = `+-+-+-+\n`;
-    result += `|${this.board[2][0]}|${this.board[2][1]}|${this.board[2][2]}|\n`;
-    result += `+-+-+-+\n`;
-    result += `|${this.board[1][0]}|${this.board[1][1]}|${this.board[1][2]}|\n`;
-    result += `+-+-+-+\n`;
-    result += `|${this.board[0][0]}|${this.board[0][1]}|${this.board[0][2]}|\n`;
-    result += `+-+-+-+\n`;
+    let result = this.getGameBoard();
     if (this.gameOver) {
       result += `[Sandbox 3x3] BOOM! – Game Over.`;
     } else {
@@ -36,6 +24,10 @@ class MineSweeper {
   }
 
   getRoundResult() {
+    return `${this.getGameBoard()}${this.roundResult}`;
+  }
+
+  getGameBoard() {
     let result = `+-+-+-+\n`;
     result += `|${this.board[2][0]}|${this.board[2][1]}|${this.board[2][2]}|\n`;
     result += `+-+-+-+\n`;
@@ -43,7 +35,6 @@ class MineSweeper {
     result += `+-+-+-+\n`;
     result += `|${this.board[0][0]}|${this.board[0][1]}|${this.board[0][2]}|\n`;
     result += `+-+-+-+\n`;
-    result += `${this.roundResult}`;
     return result;
   }
 
