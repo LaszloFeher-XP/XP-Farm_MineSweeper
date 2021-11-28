@@ -135,6 +135,18 @@ So that check if board is cleared
  - When takeSteps
  - Then return `the land is cleared! GOOD JOB!`
 
+### User story 4. - Clear the board recursively
+As a user
+I want to clear the board with steps
+So that check if board is cleared with recursion
+
+#### Scenarios
+
+#### 4.11
+ - Given 1 bomb on 0,0
+ - When takeStep to 2,2
+ - Then recursive check to fields have 0 bombs 0,2 1,2
+
 # Setting up the environment
 
 ## To install dependencies
