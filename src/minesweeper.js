@@ -52,14 +52,7 @@ class MineSweeper {
       return;
     }
 
-    let numberOfBombs = 0;
-    for (let i = -1; i < this.DIMENSION - 1; i++) {
-      for (let j = -1; j < this.DIMENSION - 1; j++) {
-        if (this.bombs[row + i] && this.bombs[row + i][col + j]) {
-          numberOfBombs++;
-        }
-      }
-    }
+    let numberOfBombs = this.numberOfBombs(row, col);
     if (numberOfBombs > 0) {
       this.board[row][col] = numberOfBombs;
       this.roundResult = `${this.sandbox()} ${numberOfBombs} bombs around your square.`;
@@ -68,6 +61,18 @@ class MineSweeper {
       this.board[row][col] = this.NO_NEIGHBOURS;
       this.checkNeighbours(row, col);
     }
+  }
+
+  numberOfBombs(row, col) {
+    let numberOfBombs = 0;
+    for (let i = -1; i < this.DIMENSION - 1; i++) {
+      for (let j = -1; j < this.DIMENSION - 1; j++) {
+        if (this.bombs[row + i] && this.bombs[row + i][col + j]) {
+          numberOfBombs++;
+        }
+      }
+    }
+    return numberOfBombs;
   }
 
   checkNeighbours(row, col) {
