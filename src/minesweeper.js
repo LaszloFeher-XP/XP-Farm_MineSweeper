@@ -5,6 +5,9 @@ class MineSweeper {
     this.bombs = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
     this.roundResult = '';
     this.gameOver = false;
+
+    this.BOMB = 'X';
+    this.FLAG = '*';
   }
 
   getGameBoardAndCreationLabels() {
@@ -40,7 +43,7 @@ class MineSweeper {
 
   takeStep(row, col) {
     if (this.bombs[row][col]) {
-      this.board[row][col] = 'X';
+      this.board[row][col] = this.BOMB;
       this.gameOver = true;
       return;
     }
@@ -63,7 +66,7 @@ class MineSweeper {
   }
 
   flagSquare(row, col) {
-    this.board[row][col] = '*';
+    this.board[row][col] = this.FLAG;
     this.roundResult = `[Sandbox 3x3] Square flagged as bomb.`;
   }
 }
