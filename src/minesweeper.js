@@ -97,6 +97,10 @@ class MineSweeper {
   sandbox() {
     return `[Sandbox ${this.DIMENSION}x${this.DIMENSION}]`;
   }
+
+  searchForFreeCell() {
+
+  }
 }
 
 module.exports = {

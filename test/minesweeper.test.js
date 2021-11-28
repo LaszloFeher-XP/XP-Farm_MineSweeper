@@ -282,4 +282,30 @@ describe('Mine Sweeper Kata', () => {
       });
     });
   });
+
+  describe('US5 - Game Logic tests', () => {
+    describe('1 bomb, 8 steps', () => {
+      test('12. GIVEN 1 bomb on 2,2 and 8 steps WHEN search for free cells THEN returns 2,2', () => {
+
+        // GIVEN
+        const mineSweeper = new MineSweeper();
+        mineSweeper.addBomb(2, 2);
+
+        mineSweeper.takeStep(0, 0);
+        mineSweeper.takeStep(0, 1);
+        mineSweeper.takeStep(0, 2);
+        mineSweeper.takeStep(1, 0);
+        mineSweeper.takeStep(1, 1);
+        mineSweeper.takeStep(1, 2);
+        mineSweeper.takeStep(2, 0);
+        mineSweeper.takeStep(2, 1);
+
+        // WHEN
+        const freeCell = mineSweeper.searchForFreeCell();
+
+        // THEN        
+        expect(freeCell).toStrictEqual([2, 2]);
+      });
+    });
+  });
 });

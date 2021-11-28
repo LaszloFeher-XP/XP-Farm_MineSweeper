@@ -51,3 +51,4 @@
  - refactored: moved sandbox to function ✔
  - refactored: moved numberOfBombs to function ✔
  - US5 🚧
+ - added US5/5.12 ✔
