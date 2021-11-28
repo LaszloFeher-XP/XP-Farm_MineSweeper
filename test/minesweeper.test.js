@@ -62,6 +62,9 @@ describe('Mine Sweeper Kata', () => {
       test('7. GIVEN 3 bombs on 2,1 1,1 1,2 WHEN takeStep to 2,2 THEN 3 bombs around your square', () => {
         // GIVEN
         const mineSweeper = new MineSweeper();
+        mineSweeper.addBomb(2, 1);
+        mineSweeper.addBomb(1, 1);
+        mineSweeper.addBomb(1, 2);
 
         // WHEN
         mineSweeper.takeStep(2, 2);
