@@ -78,6 +78,25 @@ describe('Mine Sweeper Kata', () => {
         expect(mineSweeper.getRoundResult()).toStrictEqual(expected);
       });
 
+      test('8. GIVEN 2 bombs on 1,0 1,2 1,2 WHEN takeStep to 2,2 THEN 3 bombs around your square', () => {
+
+        // GIVEN
+        const mineSweeper = new MineSweeper();
+
+        // WHEN
+        mineSweeper.takeStep(1, 1);
+
+        // THEN
+        let expected = `+-+-+-+\n`;
+        expected += `| | | |\n`;
+        expected += `+-+-+-+\n`;
+        expected += `| |2| |\n`;
+        expected += `+-+-+-+\n`;
+        expected += `| | | |\n`;
+        expected += `+-+-+-+\n`;
+        expected += `[Sandbox 3x3] 2 bombs around your square.`;
+        expect(mineSweeper.getRoundResult()).toStrictEqual(expected);
+      });
     });
   });
 });

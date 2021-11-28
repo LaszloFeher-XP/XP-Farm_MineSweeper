@@ -25,4 +25,5 @@
 ## 2. Pomodoro
  - refactored US2/2.7 ✔
  - refactored US1/UAT1.3 ✔
+ - added US2/2.8
  
