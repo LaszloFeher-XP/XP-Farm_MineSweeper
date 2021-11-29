@@ -3,16 +3,9 @@ const { MineSweeper } = require('./minesweeper');
 class Start {
   startGame() {
     const mineSweeper = new MineSweeper();
-    const NUMBER_OF_BOMBS = 2;
-    let bombs = [];
-    do {
-      let freeCell = mineSweeper.searchForFreeCell();
-      if (!bombs.includes(freeCell.toString())) {
-        mineSweeper.addBomb(freeCell[0], freeCell[1]);
-        bombs.push(freeCell.toString());
-      }
-    } while (bombs.length < NUMBER_OF_BOMBS);
 
+    mineSweeper.addBomb(0, 0);
+    mineSweeper.addBomb(0, 2);
 
     console.log(`${mineSweeper.getGameBoardAndCreationLabels()}\n`);
     const interval = setInterval(() => {

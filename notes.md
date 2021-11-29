@@ -66,3 +66,6 @@
 - refactor constructor: moved variables to function ✔
 - refactor takeStep: split into functions ✔
 - refactor numberOfBombs: changed dimensions ✔
+- added start.js ✔
+- copy start.js to start_simple.js ✔
+- refactor start.js: added bombs to random position ✔
