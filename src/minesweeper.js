@@ -24,7 +24,7 @@ class MineSweeper {
     if (this.gameOver) {
       result += `${this.sandbox()} BOOM! – Game Over.`;
     }
-    if (!this.gameOver) {
+    if (this.cleared()) {
       result += `${this.sandbox()} the land is cleared! GOOD JOB!`;
     }
     return result;
@@ -53,7 +53,7 @@ class MineSweeper {
     }
 
     let numberOfBombs = this.numberOfBombs(row, col);
-    if (numberOfBombs > 0) {
+    if (numberOfBombs > 0 && !this.cleared()) {
       this.board[row][col] = numberOfBombs;
       this.roundResult = `${this.sandbox()} ${numberOfBombs} bombs around your square.`;
     }
@@ -106,6 +106,17 @@ class MineSweeper {
       col = Math.floor(Math.random() * this.DIMENSION);
     } while (this.board[row][col] !== this.EMPTY);
     return [row, col];
+  }
+
+  cleared() {
+    for (let i = 0; i < this.DIMENSION; i++) {
+      for (let j = 0; j < this.DIMENSION; j++) {
+        if (this.board[i][j] === this.EMPTY && !this.bombs[i][j]) {
+          return false;
+        }
+      }
+    }
+    return true;
   }
 }
 

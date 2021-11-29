@@ -61,3 +61,4 @@
 - added US5/5.14 ✔
 - US5 ✔
 - US6 🚧
+- refactor US6: added cleared to check if board is full ✔

@@ -12,7 +12,7 @@ class Start {
       let freeCell = mineSweeper.searchForFreeCell();
       mineSweeper.takeStep(freeCell[0], freeCell[1]);
       console.log(`${mineSweeper.getRoundResult()}\n`);
-      if (mineSweeper.gameOver) {
+      if (mineSweeper.gameOver || mineSweeper.cleared()) {
         console.log(mineSweeper.getFinalResult());
         clearInterval(interval);
       }
