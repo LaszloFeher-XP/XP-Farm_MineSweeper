@@ -10,7 +10,7 @@ class Start {
       let freeCell = mineSweeper.searchForFreeCell();
       if (!bombs.includes(freeCell.toString())) {
         mineSweeper.addBomb(freeCell[0], freeCell[1]);
-        console.log(`${i++}. mine: `, freeCell);
+        // console.log(`${i++}. mine: `, freeCell);
         bombs.push(freeCell.toString());
       }
     } while (bombs.length < NUMBER_OF_BOMBS);
@@ -20,7 +20,7 @@ class Start {
     const interval = setInterval(() => {
       let freeCell = mineSweeper.searchForFreeCell();
       mineSweeper.takeStep(freeCell[0], freeCell[1]);
-      console.log(`STEP: `, freeCell);
+      // console.log(`STEP: `, freeCell);
       if (!mineSweeper.gameOver && !mineSweeper.cleared()) {
         console.log(`${mineSweeper.getRoundResult()}\n`);
       }

@@ -60,7 +60,7 @@
 - fixed US5/5.13 ✔
 - added US5/5.14 ✔
 - US5 ✔
-- US6 🚧
+- US6 ✔
 - refactor US6: added cleared to check if board is full ✔
 - refactor US6: removed round result if game over ✔
 - refactor constructor: moved variables to function ✔
