@@ -187,3 +187,10 @@ To install dependencies, run the following:
 To run the tests, there is a script in the project root called test. It calculates code coverage, incorporates watch mode, and prints in verbose mode, so all test file's test report will be visible. Alternatively, you can achieve the same with the command the script contains:
 
 ```npm test -- --watchAll --collect-coverage --verbose``` 
+
+
+## To run the program (BOT game) in the terminal:
+
+To run the working program
+
+```node 'src/start.js'```
