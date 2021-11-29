@@ -158,7 +158,6 @@ So that check for cells
  - Given 1 bomb on 2,2 and 8 steps
  - When search for free cells
  - Then returns 2,2
-
  
 #### 5.13
  - Given 1 bomb on 0,0 and 1 step on 2,2
@@ -178,4 +177,3 @@ To install dependencies, run the following:
 To run the tests, there is a script in the project root called test. It calculates code coverage, incorporates watch mode, and prints in verbose mode, so all test file's test report will be visible. Alternatively, you can achieve the same with the command the script contains:
 
 ```npm test -- --watchAll --collect-coverage --verbose``` 
-

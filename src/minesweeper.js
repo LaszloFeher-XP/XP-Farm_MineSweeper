@@ -99,7 +99,13 @@ class MineSweeper {
   }
 
   searchForFreeCell() {
-    return [2, 2]
+    let row = 0;
+    let col = 0;
+    do {
+      row = Math.floor(Math.random() * this.DIMENSION);
+      col = Math.floor(Math.random() * this.DIMENSION);
+    } while (this.board[row][col] !== this.EMPTY);
+    return [row, col];
   }
 }
 
