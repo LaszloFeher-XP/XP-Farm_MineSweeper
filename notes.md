@@ -58,3 +58,5 @@
 ## 4. Pomodoro
 - added US5/5.13 ✔
 - fixed US5/5.13 ✔
+- added US5/5.14 ✔
+- US5 ✔

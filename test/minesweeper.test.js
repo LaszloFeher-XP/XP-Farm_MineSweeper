@@ -323,5 +323,29 @@ describe('Mine Sweeper Kata', () => {
         expect(freeCell).toStrictEqual([0, 0]);
       });
     });
+
+    describe('1 bomb, 8 flags', () => {
+      test('14. GIVEN 1 bomb on 2,2 and 8 flags WHEN search for free cells THEN returns 2,2', () => {
+
+        // GIVEN
+        const mineSweeper = new MineSweeper();
+        mineSweeper.addBomb(1, 1);
+
+        mineSweeper.flagSquare(0, 0);
+        mineSweeper.flagSquare(0, 1);
+        mineSweeper.flagSquare(0, 2);
+        mineSweeper.flagSquare(1, 0);
+        mineSweeper.flagSquare(1, 2);
+        mineSweeper.flagSquare(2, 0);
+        mineSweeper.flagSquare(2, 1);
+        mineSweeper.flagSquare(2, 2);
+
+        // WHEN
+        const freeCell = mineSweeper.searchForFreeCell();
+
+        // THEN        
+        expect(freeCell).toStrictEqual([1, 1]);
+      });
+    });
   });
 });
