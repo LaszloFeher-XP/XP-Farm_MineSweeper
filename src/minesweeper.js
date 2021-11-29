@@ -3,9 +3,12 @@ class MineSweeper {
   constructor() {
     this.board = [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']];
     this.bombs = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
+    this.setVariables();
+  }
+
+  setVariables() {
     this.roundResult = '';
     this.gameOver = false;
-
     this.BOMB = 'X';
     this.FLAG = '*';
     this.NO_NEIGHBOURS = '_';

@@ -63,3 +63,4 @@
 - US6 🚧
 - refactor US6: added cleared to check if board is full ✔
 - refactor US6: removed round result if game over ✔
+- refactor constructor: moved variables to function ✔
