@@ -81,9 +81,9 @@ class MineSweeper {
 
   numberOfBombs(row, col) {
     let numberOfBombs = 0;
-    for (let i = -1; i < this.DIMENSION - 1; i++) {
-      for (let j = -1; j < this.DIMENSION - 1; j++) {
-        if (this.bombs[row + i] && this.bombs[row + i][col + j]) {
+    for (let i = 0; i < this.DIMENSION; i++) {
+      for (let j = 0; j < this.DIMENSION; j++) {
+        if (this.bombs[row + (i - 1)] && this.bombs[row + (i - 1)][col + (j - 1)]) {
           numberOfBombs++;
         }
       }

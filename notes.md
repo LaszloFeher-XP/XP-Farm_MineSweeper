@@ -65,3 +65,4 @@
 - refactor US6: removed round result if game over ✔
 - refactor constructor: moved variables to function ✔
 - refactor takeStep: split into functions ✔
+- refactor numberOfBombs: changed dimensions ✔
