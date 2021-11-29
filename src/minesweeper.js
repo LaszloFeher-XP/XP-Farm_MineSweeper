@@ -49,18 +49,31 @@ class MineSweeper {
   }
 
   takeStep(row, col) {
+    if (this.checkIfGameOver(row, col)) {
+      return;
+    }
+    this.checkIfHasBombs(row, col);
+    this.checkIfNoBomb(row, col);
+  }
+
+  checkIfGameOver(row, col) {
     if (this.bombs[row][col]) {
       this.board[row][col] = this.BOMB;
       this.gameOver = true;
-      return;
+      return true;
     }
+  }
 
+  checkIfHasBombs(row, col) {
     let numberOfBombs = this.numberOfBombs(row, col);
     if (numberOfBombs > 0 && !this.cleared()) {
       this.board[row][col] = numberOfBombs;
       this.roundResult = `${this.sandbox()} ${numberOfBombs} bombs around your square.`;
     }
-    if (numberOfBombs === 0) {
+  }
+
+  checkIfNoBomb(row, col) {
+    if (this.numberOfBombs(row, col) === 0) {
       this.board[row][col] = this.NO_NEIGHBOURS;
       this.checkNeighbours(row, col);
     }
