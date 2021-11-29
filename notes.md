@@ -69,3 +69,4 @@
 - added start.js ✔
 - copy start.js to start_simple.js ✔
 - refactor start.js: added bombs to random position ✔
+- refactor start.js: log the moves ✔
