@@ -168,7 +168,12 @@ So that check for cells
  - Given 1 bomb on 1,1 and 8 flags
  - When search for free cells
  - Then returns 1,1
- 
+
+### User story 6. - Game to run
+As a user
+I want to run the game
+So that create the start.js file
+
 # Setting up the environment
 
 ## To install dependencies
