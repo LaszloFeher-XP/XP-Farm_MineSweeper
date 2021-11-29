@@ -164,6 +164,11 @@ So that check for cells
  - When search for free cells
  - Then finds only 0,0
 
+#### 5.14
+ - Given 1 bomb on 1,1 and 8 flags
+ - When search for free cells
+ - Then returns 1,1
+ 
 # Setting up the environment
 
 ## To install dependencies
